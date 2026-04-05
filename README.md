@@ -19,23 +19,31 @@ Based on React's official guide: [You Might Not Need an Effect](https://react.de
 | 9 | Notify parent via effect | Call callback in event handler |
 | 10 | Pass data to parent via effect | Lift data fetching to parent |
 | 11 | External store subscription | `useSyncExternalStore` |
-| 12 | Fetch without cleanup | Add ignore flag / abort controller, or use a data-fetching library |
+| 12 | Initialize state from props via effect | Pass prop directly to `useState` |
+| 13 | Fetch without cleanup | Add ignore flag / abort controller, or use a data-fetching library |
 
 ## Install
+
+### One-command install (recommended)
+
+```bash
+npx skills add victor36max/use-effect-killer
+```
 
 ### Project-level (shared with team)
 
 ```bash
-# From your project root
-mkdir -p .claude/skills
-cp -r use-effect-killer .claude/skills/
+mkdir -p .claude/skills/use-effect-killer
+curl -sL https://raw.githubusercontent.com/victor36max/use-effect-killer/main/SKILL.md \
+  -o .claude/skills/use-effect-killer/SKILL.md
 ```
 
 ### Personal (available across all your projects)
 
 ```bash
-mkdir -p ~/.claude/skills
-cp -r use-effect-killer ~/.claude/skills/
+mkdir -p ~/.claude/skills/use-effect-killer
+curl -sL https://raw.githubusercontent.com/victor36max/use-effect-killer/main/SKILL.md \
+  -o ~/.claude/skills/use-effect-killer/SKILL.md
 ```
 
 ## Usage
@@ -52,7 +60,7 @@ Or scope to a specific directory:
 /use-effect-killer src/components
 ```
 
-The skill will scan for all `useEffect` usages, classify each one against the 12 anti-patterns, and produce a structured report with file paths, line numbers, and concrete fix suggestions.
+The skill will scan for all `useEffect` usages, classify each one against the 13 anti-patterns, and produce a structured report with file paths, line numbers, and concrete fix suggestions.
 
 ## License
 
