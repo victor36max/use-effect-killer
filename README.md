@@ -1,6 +1,6 @@
 # use-effect-killer
 
-A [Claude Code](https://claude.ai/code) skill that audits your React codebase for `useEffect` anti-patterns and proposes idiomatic fixes.
+An agent skill that audits your React codebase for `useEffect` anti-patterns and proposes idiomatic fixes. Works with any coding agent that supports the [Agent Skills](https://github.com/vercel-labs/skills) specification — Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, and more.
 
 Based on React's official guide: [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect).
 
@@ -30,7 +30,7 @@ Based on React's official guide: [You Might Not Need an Effect](https://react.de
 npx skills add victor36max/use-effect-killer
 ```
 
-### Project-level (shared with team)
+### Manual install (Claude Code)
 
 ```bash
 mkdir -p .claude/skills/use-effect-killer
@@ -38,12 +38,12 @@ curl -sL https://raw.githubusercontent.com/victor36max/use-effect-killer/main/SK
   -o .claude/skills/use-effect-killer/SKILL.md
 ```
 
-### Personal (available across all your projects)
+### Manual install (Codex / other agents)
 
 ```bash
-mkdir -p ~/.claude/skills/use-effect-killer
+mkdir -p .agents/skills/use-effect-killer
 curl -sL https://raw.githubusercontent.com/victor36max/use-effect-killer/main/SKILL.md \
-  -o ~/.claude/skills/use-effect-killer/SKILL.md
+  -o .agents/skills/use-effect-killer/SKILL.md
 ```
 
 ## Usage
